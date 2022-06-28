@@ -1,0 +1,14 @@
+Trainer Wind: 1
+Hongyan Yang: 1
+Iris Zuo: 1
+Test: 1
+Iris: 1
+Bojji: 2
+Trainer Red: 3
+Team Rocket: 3
+123: 3
+Team Aqua: 4
+Team Magma: 5
+Test2: 5
+Fonzie: 6
+A: 6

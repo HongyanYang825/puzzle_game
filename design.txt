@@ -1,0 +1,34 @@
+'''
+    CS5001
+    Fall 2021
+    Final_Project_Design.txt
+
+    My design explanation and trade-off decisions I have made
+
+    Hongyan Yang
+'''
+
+
+Design Explanation:
+I designed the "15-puzzle" game based on a "tile-position" mapping framework. 
+Each tile and its current position are traced and updated through dictionaries.
+Thus, main functions including loading, switching, resetting, checking success
+can all be achieved by operations among the following dictionaries:
+
+location_dict -- {"loc_n": (x, y)...} (central positon of loc_n is (x,y)...)
+loc_tile_dict -- {"loc_m": "tile_n"...} (tile_n is at loc_m...)
+tile_loc_dict -- {"tile_m": "loc_n"...} (loc_n is where tile_m currently at...)
+# Each tile is a turtle object and can conduct turtle operations
+tile_mem_address_dict -- {"tile-m": turtle object at <memory address>...}
+# Each tile's frame is also a turtle object 	
+frame_dict -- {"frame_n": turtle object at <memory address>...}
+
+Trade-off Decisions:
+At first I shuffled the tiles in a totally random way, although it's straightforward,
+I find some puzzles generated were unsolvable by nature. 
+So I came up with a new "reverse" shuffle method to generate puzzle:
+I first generate a solved one (all tiles in the correct position), then move the 
+blank_tile in a legit but random way for N steps in the backend. In this way, the puzzle 
+I created is now 100% solvable. Also, because the number of steps N can be adjusted, 
+when clicking on the 'Restart Button' I added, the player can set his/her Difficulty 
+Level (a smaller step N means fewer moves needed, thus lower difficulty).
